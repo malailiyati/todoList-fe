@@ -46,15 +46,6 @@ function Home() {
     } else message.error(json.error || "Failed to delete");
   }
 
-  // async function handleToggle(id) {
-  //   const res = await fetch(`/api/todos/${id}/complete`, { method: "PATCH" });
-  //   const json = await res.json();
-  //   if (json.success) {
-  //     message.success(json.message || "Updated");
-  //     fetchTodos();
-  //   } else message.error(json.error || "Toggle failed");
-  // }
-
   async function handleToggle(id) {
     setTodos((prev) => {
       const updated = prev.map((t) =>
